@@ -30,7 +30,7 @@ const reviews = [
         id: 2,
         name: "ARJUN TYAGI",
         job: "Blockchain Engineer",
-        img: "/images/arju.jpg",
+        img: "arju.jpg",
       text:
         "When i Starts my startup i need investors but no such platforms are available for that but KWIIK provides me investors that helps me boost my startup  thanks KWIIK!!",
     },
@@ -39,7 +39,7 @@ const reviews = [
       name: "SUSHEEL KHANMOTRA",
       job: "Intern",
       img:
-        "/images/sushi.jpg",
+        "sushi.jpg",
       text:
         "KWIIK a platform that provides the way to your startup many startups on platform are now big tech companies",
     },
@@ -48,7 +48,7 @@ const reviews = [
       name: "KARTIKEY BHARDWAJ",
       job: "Creator",
       img:
-        "/images/kartik.jpg",
+        "kartik.jpg",
       text:
         "I am' founder and CEO at KWIIK and my practice is to make every great idea a big acheivement in its life ",
     },
