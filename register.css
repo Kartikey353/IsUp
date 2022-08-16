@@ -1,0 +1,181 @@
+@import url('https://fonts.googleapis.com/css2?family=Poppins:wght@200&display=swap');
+
+*,*::before,*::after{
+    box-sizing: border-box;
+} 
+
+body{
+    font-family: 'Poppins', sans-serif;
+    margin:0;
+    display: grid;
+    place-items: center; 
+    min-height: 100vh;  
+    font-weight: 1000;
+} 
+label{
+    display: block;
+    margin-bottom: 0.5rem; 
+    font-size: 20px;
+}
+input,option,select{
+    display:block;
+    width: 100%;
+    padding:0.75rem;
+    border: 1px solid #ccc;
+    border-radius: 0.25rem;  
+    font-size: 18px;
+}  
+.btns-group{
+    display: flex;
+    grid-template-columns: repeat(2, 1 fr);
+    gap:4rem;
+}
+
+.width-50{
+    width: 40%;
+} 
+
+.ml-auto{
+    margin-left:auto;
+}
+
+.progressbar{
+    position: relative; 
+    display: flex; 
+    justify-content: space-between; 
+    margin: 2rem 0 4rem;
+}
+
+.progressbar::before,.progress{
+    content: ""; 
+    position: absolute;
+    height: 4px;  
+    top: 50%;
+    transform: translateY(-50%);
+    width: 100%; 
+    background-color: #dcdcdc; 
+    z-index: -1;
+} 
+
+.progress{
+    background-color:rgb(144, 46, 214); 
+    width: 0%;
+}
+
+.progress-step{
+    width: 2.2rem; 
+    height: 2.2rem;
+    background-color: #dcdcdc;
+    border-radius: 40%; 
+    display: flex;
+    justify-content: center; 
+    color: black; 
+    font-size: 20px;
+}  
+.progress-step::after{
+    content:attr(data-title); 
+    position: absolute;
+    top: calc(100% + 0.5rem);  
+    font-size: 1rem; 
+} 
+
+.progress-step-active{  
+    background-color: rgb(144, 46, 214); 
+    color: white; 
+    animation: animate 1s;
+} 
+
+
+.addbtn{
+     color: rgb(0, 0, 0);
+     font-size: 22px;
+     background: transparent; 
+     background-color: yellow;
+     border-color: transparent;
+     cursor: pointer; 
+     border-radius: 100%;
+}  
+
+.addbtn:hover{
+background-color: rgb(172, 77, 241); 
+color: black;
+}
+
+.langused{
+    display: flex; 
+    gap: 4rem;
+}
+ 
+.languages{
+    margin-top:2%;
+    max-width: 300px;
+}  
+
+i{
+    cursor: pointer;
+}
+.list{
+    width: 100%;
+}
+.text{
+    width:100%;
+}
+
+.form{
+    width: calc(100% / 2 - 1px); 
+    margin: 0 auto;
+    border:1px solid #ccc;
+    border-radius: 0.35rem;
+    padding: 1.5rem; 
+}  
+.form-step{
+    display: none; 
+    animation: animate 0.5s;
+} 
+
+
+@keyframes animate{
+    form{
+          transform:scale(1,0);
+          opacity:0;
+    } 
+    to{
+        transform: scale(1,1);
+        opacity: 1;
+    }
+} 
+
+
+.form-step-active{
+    display: block;
+}
+.input-group{
+margin: 2rem 0;
+} 
+.btn{
+    padding: 0.75rem;
+    display: block;
+    background-color: rgb(132, 0, 255);
+    color: rgb(255, 255, 255);
+    text-decoration: none; 
+    text-align: center; 
+    cursor: pointer;
+    transition: 0.3s;   
+    border: solid 3px transparent;
+    border-radius: 10px;
+    
+} 
+
+.btn:hover{
+background-color: #ccc;
+color: #111;
+} 
+
+@media screen and (max-width:894px){
+html{
+    font-size: 62.5%;
+} 
+.form {
+    width: 100vw; 
+}
+}
